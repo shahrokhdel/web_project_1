@@ -60,6 +60,10 @@ app.get("/logout", (req, res) => {
   });
 });
 
+app.get("/game", (req, res) => {
+  res.render("dicee.ejs");
+});
+
 app.get("/secrets", (req, res) => {
   if (req.isAuthenticated()) {
     res.render("secrets.ejs");
